@@ -1,19 +1,19 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Download } from "lucide-react";
 
 // Desktop nav link
-function NavLink({ href, text }) {
+function NavLink({ to, text }) {
   return (
-    <a
-      href={href}
+    <Link
+      to={to}
       className="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 p-1"
     >
       {text}
-    </a>
+    </Link>
   );
 }
 
-// Desktop resume button
 function ResumeButton() {
   return (
     <a
@@ -27,23 +27,21 @@ function ResumeButton() {
   );
 }
 
-// Mobile nav link
-function MobileNavLink({ href, text, className = "" }) {
+function MobileNavLink({ to, text }) {
   return (
-    <a
-      href={href}
-      className={`block text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 p-2 ${className}`}
+    <Link
+      to={to}
+      className="block text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 p-2"
     >
       {text}
-    </a>
+    </Link>
   );
 }
 
-// Mobile resume button
 function MobileResumeButton() {
   return (
     <a
-      href="#"
+      href="/resume.pdf"
       download
       className="flex items-center gap-1 bg-indigo-600 text-white font-medium transition duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 hover:bg-indigo-700 px-3 py-2 block"
     >
@@ -63,20 +61,18 @@ const Header = () => {
   return (
     <header className="bg-white shadow-md p-4">
       <div className="px-6 flex justify-between items-center">
-        <div>
-          <a
-            href="#"
-            className="text-2xl font-bold text-indigo-600 hover:text-indigo-800 transition duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 p-1"
-          >
-            Home
-          </a>
-        </div>
+        <Link
+          to="/"
+          className="text-2xl font-bold text-indigo-600 hover:text-indigo-800 transition duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 p-1"
+        >
+          Home
+        </Link>
 
         <nav className="hidden md:flex flex-grow justify-around max-w-2xl items-center">
-          <NavLink href="#" text="Education" />
-          <NavLink href="#" text="Experience" />
-          <NavLink href="#" text="Projects" />
-          <NavLink href="#" text="Contact" />
+          <NavLink to="/education" text="Education" />
+          <NavLink to="/experience" text="Experience" />
+          <NavLink to="/projects" text="Projects" />
+          <NavLink to="/contact" text="Contact" />
           <ResumeButton />
         </nav>
 
@@ -121,10 +117,10 @@ const Header = () => {
           isMobileMenuOpen ? "block" : "hidden"
         }`}
       >
-        <MobileNavLink href="#" text="Education" />
-        <MobileNavLink href="#" text="Experience" />
-        <MobileNavLink href="#" text="Projects" />
-        <MobileNavLink href="#" text="Contact" />
+        <MobileNavLink to="/education" text="Education" />
+        <MobileNavLink to="/experience" text="Experience" />
+        <MobileNavLink to="/projects" text="Projects" />
+        <MobileNavLink to="/contact" text="Contact" />
         <MobileResumeButton />
       </div>
     </header>

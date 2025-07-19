@@ -1,26 +1,20 @@
-import { useState } from "react";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/about/About";
 import Education from "./components/education/Education";
-import Header from "./components/header/header";
 import Experience from "./components/experience/Experience";
 import Projects from "./components/projects/Projects";
 
-
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-    {/* <About/> */}
-    {/* <Header/> */}
-    {/* <Education/> */}
-    {/* <Experience/> */}
-    <Projects/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="/education" element={<Education />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-
 export default App;
-
