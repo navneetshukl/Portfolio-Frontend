@@ -54,103 +54,98 @@ function About() {
                 }}
               />
             </div>
-            {/* Social Links Section */}
-            <div className="mt-4 flex flex-col items-center gap-4">
-              {/* Horizontal GitHub, LinkedIn, and Hashnode */}
-              <div className="flex gap-4">
-                <a
-                  href="https://github.com/your-username"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#181717] hover:text-gray-600 transition-colors duration-200"
-                  title="GitHub"
-                >
-                  <FaGithub size={32} />
-                </a>
-                <a
-                  href="https://linkedin.com/in/your-username"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#0A66C2] hover:text-blue-600 transition-colors duration-200"
-                  title="LinkedIn"
-                >
-                  <FaLinkedin size={32} />
-                </a>
-                <a
-                  href="https://hashnode.com/@your-username"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#2962FF] hover:text-blue-500 transition-colors duration-200"
-                  title="Hashnode"
-                >
-                  <SiHashnode size={32} />
-                </a>
-              </div>
-              {/* Vertical Other Links */}
-              <div className="flex flex-col gap-2 items-center">
-                <a
-                  href="https://leetcode.com/your-username"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#FFA116] hover:text-orange-400 transition-colors duration-200"
-                  title="LeetCode"
-                >
-                  <SiLeetcode size={32} />
-                </a>
-                <a
-                  href="https://auth.geeksforgeeks.org/user/your-username"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#2F8D46] hover:text-green-600 transition-colors duration-200"
-                  title="GeeksforGeeks"
-                >
-                  <SiGeeksforgeeks size={32} />
-                </a>
-                <a
-                  href="https://codeforces.com/profile/your-username"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#1F8ACB] hover:text-blue-500 transition-colors duration-200"
-                  title="Codeforces"
-                >
-                  <SiCodeforces size={32} />
-                </a>
-                <a
-                  href="https://www.codechef.com/users/your-username"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#5B4638] hover:text-amber-700 transition-colors duration-200"
-                  title="Codechef"
-                >
-                  <SiCodechef size={32} />
-                </a>
-                <a
-                  href="https://atcoder.jp/users/your-username"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#000000] hover:text-gray-600 transition-colors duration-200"
-                  title="AtCoder"
-                >
-                  <img
-                    src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/atcoder.svg"
-                    alt="AtCoder"
-                    className="w-8 h-8 hover:scale-110 transition-transform duration-200"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = "https://img.atcoder.jp/assets/atcoder.png";
-                    }}
-                  />
-                </a>
-                <a
-                  href="https://www.hackerrank.com/your-username"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#00EA64] hover:text-green-400 transition-colors duration-200"
-                  title="HackerRank"
-                >
-                  <SiHackerrank size={32} />
-                </a>
-              </div>
+            {/* Social Links Section - 3x3 Grid */}
+            <div className="mt-10 grid grid-cols-3 gap-4">
+              <a
+                href="https://github.com/your-username"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#181717] hover:text-gray-600 transition-colors duration-200 flex justify-center"
+                title="GitHub"
+              >
+                <FaGithub size={32} />
+              </a>
+              <a
+                href="https://linkedin.com/in/your-username"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#0A66C2] hover:text-blue-600 transition-colors duration-200 flex justify-center"
+                title="LinkedIn"
+              >
+                <FaLinkedin size={32} />
+              </a>
+              <a
+                href="https://leetcode.com/your-username"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#FFA116] hover:text-orange-400 transition-colors duration-200 flex justify-center"
+                title="LeetCode"
+              >
+                <SiLeetcode size={32} />
+              </a>
+              <a
+                href="https://codeforces.com/profile/your-username"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#1F8ACB] hover:text-blue-500 transition-colors duration-200 flex justify-center"
+                title="Codeforces"
+              >
+                <SiCodeforces size={32} />
+              </a>
+              <a
+                href="https://www.codechef.com/users/your-username"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#5B4638] hover:text-amber-700 transition-colors duration-200 flex justify-center"
+                title="Codechef"
+              >
+                <SiCodechef size={32} />
+              </a>
+              <a
+                href="https://auth.geeksforgeeks.org/user/your-username"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#2F8D46] hover:text-green-600 transition-colors duration-200 flex justify-center"
+                title="GeeksforGeeks"
+              >
+                <SiGeeksforgeeks size={32} />
+              </a>
+              
+              <a
+                href="https://atcoder.jp/users/your-username"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#000000] hover:text-gray-600 transition-colors duration-200 flex justify-center"
+                title="AtCoder"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/atcoder.svg"
+                  alt="AtCoder"
+                  className="w-8 h-8 hover:scale-110 transition-transform duration-200"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "https://img.atcoder.jp/assets/atcoder.png";
+                  }}
+                />
+              </a>
+              <a
+                href="https://www.hackerrank.com/your-username"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00EA64] hover:text-green-400 transition-colors duration-200 flex justify-center"
+                title="HackerRank"
+              >
+                <SiHackerrank size={32} />
+              </a>
+              <a
+                href="https://hashnode.com/@your-username"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#2962FF] hover:text-blue-500 transition-colors duration-200 flex justify-center"
+                title="Hashnode"
+              >
+                <SiHashnode size={32} />
+              </a>
             </div>
           </div>
 
