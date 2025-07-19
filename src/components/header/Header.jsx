@@ -45,8 +45,8 @@ const Header = () => {
 
         <nav className="hidden md:flex flex-grow justify-around max-w-2xl">
           <NavLink href="#" text="Home" />
-          <NavLink href="#" text="About" />
-          <NavLink href="#" text="Portfolio" />
+          <NavLink href="#" text="Education" />
+          <NavLink href="#" text="Experience" />
           <NavLink href="#" text="Contact" />
         </nav>
 
@@ -92,8 +92,8 @@ const Header = () => {
         }`}
       >
         <MobileNavLink href="#" text="Home" />
-        <MobileNavLink href="#" text="About" />
-        <MobileNavLink href="#" text="Portfolio" />
+        <MobileNavLink href="#" text="Education" />
+        <MobileNavLink href="#" text="Experience" />
         <MobileNavLink href="#" text="Contact" />
       </div>
     </header>

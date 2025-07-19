@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import About from "./components/about/About";
+import Education from "./components/education/Education";
+import Header from "./components/header/header";
 
 
 function App() {
@@ -8,7 +10,9 @@ function App() {
 
   return (
     <>
-    <About/>
+    {/* <About/> */}
+    {/* <Header/> */}
+    <Education/>
     </>
   );
 }
