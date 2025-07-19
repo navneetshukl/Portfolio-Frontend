@@ -4,6 +4,7 @@ import About from "./components/about/About";
 import Education from "./components/education/Education";
 import Header from "./components/header/header";
 import Experience from "./components/experience/Experience";
+import Projects from "./components/projects/Projects";
 
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
     {/* <About/> */}
     {/* <Header/> */}
     {/* <Education/> */}
-    <Experience/>
+    {/* <Experience/> */}
+    <Projects/>
     </>
   );
 }
