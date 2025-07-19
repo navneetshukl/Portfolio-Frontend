@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Download } from "lucide-react";
 
 // Desktop nav link
 function NavLink({ href, text }) {
@@ -8,6 +9,20 @@ function NavLink({ href, text }) {
       className="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 p-1"
     >
       {text}
+    </a>
+  );
+}
+
+// Desktop resume button
+function ResumeButton() {
+  return (
+    <a
+      href="/resume.pdf"
+      download
+      className="flex items-center gap-1 bg-indigo-600 text-white font-medium transition duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 hover:bg-indigo-700 px-3 py-1"
+    >
+      <Download size={16} />
+      Resume
     </a>
   );
 }
@@ -24,6 +39,20 @@ function MobileNavLink({ href, text, className = "" }) {
   );
 }
 
+// Mobile resume button
+function MobileResumeButton() {
+  return (
+    <a
+      href="#"
+      download
+      className="flex items-center gap-1 bg-indigo-600 text-white font-medium transition duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 hover:bg-indigo-700 px-3 py-2 block"
+    >
+      <Download size={16} />
+      Resume
+    </a>
+  );
+}
+
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -32,22 +61,23 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-md p-4 rounded-b-lg">
-      <div className="container mx-auto flex justify-between items-center">
+    <header className="bg-white shadow-md p-4">
+      <div className="px-6 flex justify-between items-center">
         <div>
           <a
             href="#"
             className="text-2xl font-bold text-indigo-600 hover:text-indigo-800 transition duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 p-1"
           >
-            MyPortfolio
+            Home
           </a>
         </div>
 
-        <nav className="hidden md:flex flex-grow justify-around max-w-2xl">
-          <NavLink href="#" text="Home" />
+        <nav className="hidden md:flex flex-grow justify-around max-w-2xl items-center">
           <NavLink href="#" text="Education" />
           <NavLink href="#" text="Experience" />
+          <NavLink href="#" text="Projects" />
           <NavLink href="#" text="Contact" />
+          <ResumeButton />
         </nav>
 
         <div className="md:hidden">
@@ -91,10 +121,11 @@ const Header = () => {
           isMobileMenuOpen ? "block" : "hidden"
         }`}
       >
-        <MobileNavLink href="#" text="Home" />
         <MobileNavLink href="#" text="Education" />
         <MobileNavLink href="#" text="Experience" />
+        <MobileNavLink href="#" text="Projects" />
         <MobileNavLink href="#" text="Contact" />
+        <MobileResumeButton />
       </div>
     </header>
   );

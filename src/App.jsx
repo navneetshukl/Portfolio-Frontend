@@ -3,6 +3,7 @@ import "./App.css";
 import About from "./components/about/About";
 import Education from "./components/education/Education";
 import Header from "./components/header/header";
+import Experience from "./components/experience/Experience";
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
     <>
     {/* <About/> */}
     {/* <Header/> */}
-    <Education/>
+    {/* <Education/> */}
+    <Experience/>
     </>
   );
 }
