@@ -40,7 +40,7 @@ function Contact() {
     setSubmitStatus("");
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://portfolio-backend-4-admv.onrender.com/api/sendEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
