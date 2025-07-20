@@ -1,6 +1,6 @@
 import React from 'react';
 import { Github, ExternalLink } from 'lucide-react';
-import Header from '../header/header';
+import Header from '../header/Header';
 
 const Projects = () => {
   const projects = [

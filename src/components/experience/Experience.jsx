@@ -1,6 +1,6 @@
 import React from 'react';
 import { Briefcase, Building, Calendar, Code, CheckCircle2 } from 'lucide-react';
-import Header from '../header/header';
+import Header from '../header/Header';
 
 const Experience = () => {
   const experienceData = [

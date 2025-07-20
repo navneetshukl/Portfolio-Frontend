@@ -1,6 +1,6 @@
 import React from 'react';
 import { GraduationCap, School, Award, MapPin, Calendar } from 'lucide-react';
-import Header from '../header/header';
+import Header from '../header/Header';
 
 const Education = () => {
   const educationData = {
