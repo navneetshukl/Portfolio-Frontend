@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "../header/header";
+import Header from "../header/Header";
 
 // Import icons from react-icons/fa for GitHub and LinkedIn
 import { FaGithub, FaLinkedin } from "react-icons/fa";
