@@ -1,18 +1,18 @@
-import React from 'react';
-import { GraduationCap, School, Award, MapPin, Calendar } from 'lucide-react';
-import Header from '../header/Header';
+import React from "react";
+import { GraduationCap, School, Award, MapPin, Calendar } from "lucide-react";
+import Header from "../header/Header";
 
 const Education = () => {
   const educationData = {
     tenth: {
       schoolName: "W.H Smith Memorial School",
       year: "2016",
-      percentage: "87%"
+      percentage: "87%",
     },
     twelfth: {
       schoolName: "ST John's School",
-      year: "2018", 
-      percentage: "75.4%"
+      year: "2018",
+      percentage: "75.4%",
     },
     graduation: {
       collegeName: "Bundelkhand Institute of Engineering and Technology",
@@ -20,12 +20,12 @@ const Education = () => {
       duration: "2019 - 2023",
       location: "Jhansi,Uttar Pradesh, India",
       yearlyGrades: [
-        { year: "1st Year", cgpa: "8.5" },
-        { year: "2nd Year", cgpa: "8.7" },
+        { year: "1st Year", cgpa: "8.2" },
+        { year: "2nd Year", cgpa: "8.19"},
         { year: "3rd Year", cgpa: "9.1" },
-        { year: "4th Year", cgpa: "9.2" }
-      ]
-    }
+        { year: "4th Year", cgpa: "9.2" },
+      ],
+    },
   };
 
   return (
@@ -44,30 +44,45 @@ const Education = () => {
             <div className="p-2.5">
               <div className="grid md:grid-cols-3 gap-2.5 mb-1.5">
                 <div className="bg-gray-50 p-2.5 rounded-md">
-                  <h4 className="font-semibold text-gray-700 text-[0.8rem] mb-1.5">College</h4>
-                  <p className="text-gray-900 text-[0.9rem]">{educationData.graduation.collegeName}</p>
+                  <h4 className="font-semibold text-gray-700 text-[0.8rem] mb-1.5">
+                    College
+                  </h4>
+                  <p className="text-gray-900 text-[0.9rem]">
+                    {educationData.graduation.collegeName}
+                  </p>
                 </div>
                 <div className="bg-gray-50 p-2.5 rounded-md">
                   <h4 className="font-semibold text-gray-700 text-[0.8rem] mb-1.5 flex items-center gap-1">
                     <Calendar size={16} />
                     Duration
                   </h4>
-                  <p className="text-gray-900 text-[0.9rem]">{educationData.graduation.duration}</p>
+                  <p className="text-gray-900 text-[0.9rem]">
+                    {educationData.graduation.duration}
+                  </p>
                 </div>
                 <div className="bg-gray-50 p-2.5 rounded-md">
                   <h4 className="font-semibold text-gray-700 text-[0.8rem] mb-1.5 flex items-center gap-1">
                     <MapPin size={16} />
                     Location
                   </h4>
-                  <p className="text-gray-900 text-[0.9rem]">{educationData.graduation.location}</p>
+                  <p className="text-gray-900 text-[0.9rem]">
+                    {educationData.graduation.location}
+                  </p>
                 </div>
               </div>
               <div className="bg-purple-50 p-2.5 rounded-md border border-purple-200">
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5">
                   {educationData.graduation.yearlyGrades.map((grade, index) => (
-                    <div key={index} className="bg-white p-2 rounded-md text-center">
-                      <p className="text-[0.8rem] font-medium text-gray-600 mb-1.5">{grade.year}</p>
-                      <p className="text-base font-bold text-purple-600">{grade.cgpa}</p>
+                    <div
+                      key={index}
+                      className="bg-white p-2 rounded-md text-center"
+                    >
+                      <p className="text-[0.8rem] font-medium text-gray-600 mb-1.5">
+                        {grade.year}
+                      </p>
+                      <p className="text-base font-bold text-purple-600">
+                        {grade.cgpa}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -86,22 +101,30 @@ const Education = () => {
             <div className="p-2.5">
               <div className="grid md:grid-cols-3 gap-2.5">
                 <div className="bg-gray-50 p-2.5 rounded-md">
-                  <h4 className="font-semibold text-gray-700 text-[0.8rem] mb-1.5">School</h4>
-                  <p className="text-gray-900 text-[0.9rem]">{educationData.twelfth.schoolName}</p>
+                  <h4 className="font-semibold text-gray-700 text-[0.8rem] mb-1.5">
+                    School
+                  </h4>
+                  <p className="text-gray-900 text-[0.9rem]">
+                    {educationData.twelfth.schoolName}
+                  </p>
                 </div>
                 <div className="bg-gray-50 p-2.5 rounded-md">
                   <h4 className="font-semibold text-gray-700 text-[0.8rem] mb-1.5 flex items-center gap-1">
                     <Calendar size={16} />
                     Year
                   </h4>
-                  <p className="text-gray-900 text-[0.9rem]">{educationData.twelfth.year}</p>
+                  <p className="text-gray-900 text-[0.9rem]">
+                    {educationData.twelfth.year}
+                  </p>
                 </div>
                 <div className="bg-blue-50 p-2.5 rounded-md border border-blue-200">
                   <h4 className="font-semibold text-gray-700 text-[0.8rem] mb-1.5 flex items-center gap-1">
                     <Award size={16} />
                     Percentage
                   </h4>
-                  <p className="text-blue-600 font-bold text-base">{educationData.twelfth.percentage}</p>
+                  <p className="text-blue-600 font-bold text-base">
+                    {educationData.twelfth.percentage}
+                  </p>
                 </div>
               </div>
             </div>
@@ -118,22 +141,30 @@ const Education = () => {
             <div className="p-2.5">
               <div className="grid md:grid-cols-3 gap-2.5">
                 <div className="bg-gray-50 p-2.5 rounded-md">
-                  <h4 className="font-semibold text-gray-700 text-[0.8rem] mb-1.5">School</h4>
-                  <p className="text-gray-900 text-[0.9rem]">{educationData.tenth.schoolName}</p>
+                  <h4 className="font-semibold text-gray-700 text-[0.8rem] mb-1.5">
+                    School
+                  </h4>
+                  <p className="text-gray-900 text-[0.9rem]">
+                    {educationData.tenth.schoolName}
+                  </p>
                 </div>
                 <div className="bg-gray-50 p-2.5 rounded-md">
                   <h4 className="font-semibold text-gray-700 text-[0.8rem] mb-1.5 flex items-center gap-1">
                     <Calendar size={16} />
                     Year
                   </h4>
-                  <p className="text-gray-900 text-[0.9rem]">{educationData.tenth.year}</p>
+                  <p className="text-gray-900 text-[0.9rem]">
+                    {educationData.tenth.year}
+                  </p>
                 </div>
                 <div className="bg-green-50 p-2.5 rounded-md border border-green-200">
                   <h4 className="font-semibold text-gray-700 text-[0.8rem] mb-1.5 flex items-center gap-1">
                     <Award size={16} />
                     Percentage
                   </h4>
-                  <p className="text-green-600 font-bold text-base">{educationData.tenth.percentage}</p>
+                  <p className="text-green-600 font-bold text-base">
+                    {educationData.tenth.percentage}
+                  </p>
                 </div>
               </div>
             </div>

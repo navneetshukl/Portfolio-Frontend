@@ -57,7 +57,7 @@ function About() {
             {/* Social Links Section - 3x3 Grid */}
             <div className="mt-10 grid grid-cols-3 gap-4">
               <a
-                href="https://github.com/your-username"
+                href="https://github.com/navneetshukl"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#181717] hover:text-gray-600 transition-colors duration-200 flex justify-center"
@@ -66,7 +66,7 @@ function About() {
                 <FaGithub size={32} />
               </a>
               <a
-                href="https://linkedin.com/in/your-username"
+                href="https://www.linkedin.com/in/navneet-shukla-19a97a1a0/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#0A66C2] hover:text-blue-600 transition-colors duration-200 flex justify-center"
@@ -75,7 +75,7 @@ function About() {
                 <FaLinkedin size={32} />
               </a>
               <a
-                href="https://leetcode.com/your-username"
+                href="https://leetcode.com/u/navneetshukla824/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#FFA116] hover:text-orange-400 transition-colors duration-200 flex justify-center"
@@ -84,7 +84,7 @@ function About() {
                 <SiLeetcode size={32} />
               </a>
               <a
-                href="https://codeforces.com/profile/your-username"
+                href="https://codeforces.com/profile/navneetshukla824"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#1F8ACB] hover:text-blue-500 transition-colors duration-200 flex justify-center"
@@ -93,7 +93,7 @@ function About() {
                 <SiCodeforces size={32} />
               </a>
               <a
-                href="https://www.codechef.com/users/your-username"
+                href="https://www.codechef.com/users/navneet1402"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#5B4638] hover:text-amber-700 transition-colors duration-200 flex justify-center"
@@ -102,7 +102,7 @@ function About() {
                 <SiCodechef size={32} />
               </a>
               <a
-                href="https://auth.geeksforgeeks.org/user/your-username"
+                href="https://www.geeksforgeeks.org/user/navneetshukla824/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#2F8D46] hover:text-green-600 transition-colors duration-200 flex justify-center"
@@ -112,7 +112,7 @@ function About() {
               </a>
               
               <a
-                href="https://atcoder.jp/users/your-username"
+                href="https://atcoder.jp/users/Navneet824"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#000000] hover:text-gray-600 transition-colors duration-200 flex justify-center"
@@ -129,7 +129,7 @@ function About() {
                 />
               </a>
               <a
-                href="https://www.hackerrank.com/your-username"
+                href="https://www.hackerrank.com/profile/navneetshukla824"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#00EA64] hover:text-green-400 transition-colors duration-200 flex justify-center"
@@ -138,7 +138,7 @@ function About() {
                 <SiHackerrank size={32} />
               </a>
               <a
-                href="https://hashnode.com/@your-username"
+                href="https://hashnode.com/@navneets"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#2962FF] hover:text-blue-500 transition-colors duration-200 flex justify-center"
