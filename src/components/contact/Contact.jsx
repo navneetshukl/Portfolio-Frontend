@@ -89,29 +89,29 @@ function Contact() {
                   <SocialLink
                     icon={<FaEnvelope className="text-red-500" />}
                     label="Email"
-                    value="navneet.shukla@email.com"
-                    href="mailto:navneet.shukla@email.com"
+                    value="yatinjalshukla825@gmailcom"
+                    href="mailto:yatinjalshukla825@gmail.com"
                     description="Best for detailed discussions"
                   />
                   <SocialLink
                     icon={<FaGithub className="text-[#181717]" />}
                     label="GitHub"
-                    value="github.com/navneet-shukla"
-                    href="https://github.com/navneet-shukla"
+                    value="github.com/navneetshukl"
+                    href="https://github.com/navneetshukl"
                     description="Check out my code and projects"
                   />
                   <SocialLink
                     icon={<FaLinkedin className="text-[#0A66C2]" />}
                     label="LinkedIn"
-                    value="linkedin.com/in/navneet-shukla"
-                    href="https://linkedin.com/in/navneet-shukla"
+                    value="https://www.linkedin.com/in/navneet-shukla-19a97a1a0/"
+                    href="https://www.linkedin.com/in/navneet-shukla-19a97a1a0/"
                     description="Professional networking and updates"
                   />
                   <SocialLink
                     icon={<SiTelegram className="text-[#0088CC]" />}
                     label="Telegram"
-                    value="@navneetshukla"
-                    href="https://t.me/navneetshukla"
+                    value="@navneetshukla824"
+                    href="https://t.me/navneetshukla824"
                     description="Quick messages and instant contact"
                   />
                 </div>
