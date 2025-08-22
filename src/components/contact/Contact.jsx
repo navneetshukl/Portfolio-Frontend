@@ -70,14 +70,14 @@ function Contact() {
     formData.message.trim();
 
   return (
-    <div className="h-screen flex flex-col bg-gray-100 font-inter text-gray-800">
+    <div className="min-h-screen flex flex-col bg-gray-100 font-inter text-gray-800">
       <div className="fixed top-0 left-0 w-full z-10 bg-white shadow-md">
         <Header />
       </div>
 
       {/* Main Content */}
-      <main className="flex flex-col items-center px-4 pt-24 h-full">
-        <div className="max-w-5xl w-full flex flex-col justify-center h-full">
+      <main className="flex flex-col items-center px-4 pt-24 pb-8 w-full max-w-5xl mx-auto flex-grow">
+        <div className="w-full flex flex-col justify-center">
           <div className="grid lg:grid-cols-2 gap-6">
             {/* Contact Information & Social Links */}
             <div className="space-y-4">
@@ -181,7 +181,7 @@ function Contact() {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    rows={7} // Increased from 2 to 7 to make the textarea taller
+                    rows={7}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-none transition-all duration-200 text-sm"
                     placeholder="Hi Navneet, I'd like to discuss..."
                     required
@@ -271,7 +271,7 @@ function SocialLink({ icon, label, value, href, description }) {
             Click to open
           </span>
         </div>
-        <div className="text-xs text-gray-600 mt-1">{value}</div>
+        <div className="text-xs text-gray-600 mt-1 truncate">{value}</div>
         <div className="text-xs text-gray-500 mt-1">{description}</div>
       </div>
     </a>

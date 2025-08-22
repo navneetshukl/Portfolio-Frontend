@@ -33,16 +33,16 @@ import {
 
 function About() {
   return (
-    <div className="h-screen flex flex-col bg-gray-100 font-inter text-gray-800 overflow-hidden">
+    <div className="min-h-screen flex flex-col bg-gray-100 font-inter text-gray-800">
       {/* Header stays at top */}
       <Header />
 
       {/* Main content fills remaining space */}
-      <main className="flex-grow overflow-auto px-4 md:px-8 py-6">
-        <div className="flex flex-col md:flex-row gap-8 items-center md:items-start h-full">
+      <main className="flex-grow px-4 md:px-8 py-6 w-full max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-8 items-center lg:items-start">
           {/* Circular photo section with social links */}
-          <div className="flex-shrink-0 flex flex-col items-center">
-            <div className="w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full shadow-lg flex items-center justify-center overflow-hidden border-4 border-white transform hover:scale-105 transition-transform duration-300">
+          <div className="flex-shrink-0 flex flex-col items-center w-full lg:w-auto">
+            <div className="w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full shadow-lg flex items-center justify-center overflow-hidden border-4 border-white transform hover:scale-105 transition-transform duration-300 mx-auto">
               <img
                 src="https://placehold.co/256x256/6366F1/FFFFFF?text=Your+Photo"
                 alt="Your Profile"
@@ -55,7 +55,7 @@ function About() {
               />
             </div>
             {/* Social Links Section - 3x3 Grid */}
-            <div className="mt-10 grid grid-cols-3 gap-4">
+            <div className="mt-6 md:mt-10 grid grid-cols-3 gap-3 md:gap-4 w-full max-w-xs">
               <a
                 href="https://github.com/navneetshukl"
                 target="_blank"
@@ -150,13 +150,13 @@ function About() {
           </div>
 
           {/* About + Tech Stack */}
-          <div className="flex-grow flex flex-col gap-8 overflow-auto">
+          <div className="flex-grow flex flex-col gap-6 md:gap-8 w-full">
             {/* About Me Card */}
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
-              <h2 className="text-3xl font-bold text-indigo-700 mb-4">
+            <div className="bg-white p-5 md:p-8 rounded-xl shadow-lg border border-gray-200">
+              <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-4">
                 About Me
               </h2>
-              <p className="text-lg leading-relaxed text-gray-700">
+              <p className="text-base md:text-lg leading-relaxed text-gray-700">
                 I'm Navneet Shukla, a backend developer specializing in Go. I
                 focus on building scalable APIs, optimizing databases, and
                 delivering high-performance systems. Passionate about solving
@@ -167,11 +167,11 @@ function About() {
             </div>
 
             {/* Tech Stack Card */}
-            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
-              <h2 className="text-3xl font-bold text-indigo-700 mb-4">
+            <div className="bg-white p-5 md:p-8 rounded-xl shadow-lg border border-gray-200">
+              <h2 className="text-2xl md:text-3xl font-bold text-indigo-700 mb-4">
                 My Tech Stack
               </h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 text-lg text-gray-700">
+              <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 text-base md:text-lg text-gray-700">
                 <TechItem 
                   icon={<SiGo className="text-[#00ADD8] text-xl" />} 
                   text="Golang" 
@@ -234,7 +234,7 @@ function TechItem({ icon, text }) {
   return (
     <div className="flex items-center space-x-2 bg-gray-50 p-3 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
       <span className="flex-shrink-0">{icon}</span>
-      <span className="font-medium">{text}</span>
+      <span className="font-medium truncate">{text}</span>
     </div>
   );
 }
